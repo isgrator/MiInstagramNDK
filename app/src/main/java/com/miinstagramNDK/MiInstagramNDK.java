@@ -13,12 +13,14 @@ public class MiInstagramNDK extends AppCompatActivity {
     private String tag = "MiInstagramNDK";
     private Bitmap bitmapOriginal = null;
     private Bitmap bitmapGrises = null;
+    private Bitmap bitmapSepia = null;
     private ImageView ivDisplay = null;
 
     static {
         System.loadLibrary("imgprocesadondk");
     }
     public native void convertirGrises(Bitmap bitmapIn, Bitmap bitmapOut);
+    public native void convertirSepia(Bitmap bitmapIn, Bitmap bitmapOut);
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -46,5 +48,13 @@ public class MiInstagramNDK extends AppCompatActivity {
                 bitmapOriginal.getHeight(), Bitmap.Config.ARGB_8888);
         convertirGrises(bitmapOriginal, bitmapGrises);
         ivDisplay.setImageBitmap(bitmapGrises);
+    }
+
+    public void onConvertirSepia(View v) {
+        Log.i(tag, "Conversion a color sepia");
+        bitmapSepia = Bitmap.createBitmap(bitmapOriginal.getWidth(),
+                bitmapOriginal.getHeight(), Bitmap.Config.ARGB_8888);
+        convertirSepia(bitmapOriginal, bitmapSepia);
+        ivDisplay.setImageBitmap(bitmapSepia);
     }
 }
