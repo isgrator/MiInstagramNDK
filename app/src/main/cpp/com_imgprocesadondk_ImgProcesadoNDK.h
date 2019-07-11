@@ -21,6 +21,14 @@ JNIEXPORT void JNICALL Java_com_miinstagramNDK_MiInstagramNDK_convertirGrises
  * Signature: (Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;)V
  */
 JNIEXPORT void JNICALL Java_com_miinstagramNDK_MiInstagramNDK_convertirSepia
+(JNIEnv *, jobject, jobject, jobject);
+
+/*
+ * Class:     com_miinstagramNDK_MiInstagramNDK
+ * Method:    ponerMarco1
+ * Signature: (Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;)V
+ */
+JNIEXPORT void JNICALL Java_com_miinstagramNDK_MiInstagramNDK_ponerMarco1
         (JNIEnv *, jobject, jobject, jobject);
 
 #ifdef __cplusplus

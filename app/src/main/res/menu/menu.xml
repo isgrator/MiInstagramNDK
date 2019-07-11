@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/original"
+        android:title="Original"
+        app:showAsAction="never"/>
+    <item android:title="Grises"
+        android:id="@+id/grises"/>
+    <item android:title="Sepia"
+        android:id="@+id/sepia"/>
+    <item android:title="Marco 1"
+        android:id="@+id/marco1" />
+</menu>
